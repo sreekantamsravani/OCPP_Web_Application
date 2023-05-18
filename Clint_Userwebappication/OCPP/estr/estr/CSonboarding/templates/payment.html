@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Login</title>
+  <!-- MDB icon -->
+  <link rel="icon" href="/static/img/estr.png" type="image/x-icon" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
+  <!-- MDB -->
+  <link  href="/static/css/bootstrap.min.css" rel="stylesheet"/>
+  <!-- Custom CSS -->
+  <link  href="/static/css/custom.css" rel="stylesheet"/>
+</head>
+
+<body class="login">
+  <section class="vh-100">
+    <div class="container-fluid h-custom">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-md-9 col-lg-6 col-xl-5">
+          <img src="/static/img/login-bg.jpg" class="img-fluid login-limg d-none" alt="image">
+        </div>
+        <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+          <form action="{{ url_for('payment') }}" method="POST">
+            <h4 class="mb-4 pt-4">Payment Details</h4>
+
+            <!-- Bank Name input -->
+            <div class="form-outline mb-4">
+              <input name="bankName" type="text" id="form3Example3" class="form-control form-control-lg"
+                placeholder="Enter Bank Name" />
+              <label class="form-label" for="form3Example3">Bank Name</label>
+            </div>
+
+            <!-- Account Number input -->
+            <div class="form-outline mb-3">
+              <input name="accountNumber" type="text" id="form3Example4" class="form-control form-control-lg"
+                placeholder="Enter Account Number" />
+              <label class="form-label" for="form3Example4">Account Number</label>
+            </div>
+
+            <!-- IFSC Code input -->
+            <div class="form-outline mb-3">
+              <input name ="ifscCode" type="text" id="form3Example5" class="form-control form-control-lg"
+                placeholder="Enter IFSC Code" />
+              <label class="form-label" for="form3Example5">IFSC Code</label>
+            </div>
+
+            <!-- Branch Name input -->
+            <div class="form-outline mb-3">
+              <input name="branchName" type="text" id="form3Example6" class="form-control form-control-lg"
+                placeholder="Enter Branch Name" />
+              <label class="form-label" for="form3Example6">Branch Name</label>
+            </div>
+
+            <div class="text-center text-lg-end mt-4 pt-2">
+              <input type="submit" name="submit" value="Next" class="btn btn-primary btn-lg"  style="padding-left: 2.5rem; padding-right: 2.5rem;"/>
+              
+            </div>
+
+          </form>
+          <p>if you want add new payment details for this charging Station please fill, otherwise Ignore this Webpage</p>
+              
+          <a href="energy_rate_card_form" class="btn btn-primary btn-lg"  style="padding-left: 2.5rem; padding-right: 2.5rem;">Ignore</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MDB -->
+  <script type="text/javascript" src="/static/js/mdb.min.js"></script>
+  <!-- Custom scripts -->
+  <script type="text/javascript"></script>
+</body>
+
+</html>

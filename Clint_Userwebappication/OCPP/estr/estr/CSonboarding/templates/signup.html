@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Signup</title>
+  <!-- MDB icon -->
+  <link rel="icon" href="/static/img/estr.png" type="image/x-icon" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
+  <!-- MDB -->
+  <link  href="/static/css/bootstrap.min.css" rel="stylesheet"/>
+  <!-- Custom CSS -->
+  <link  href="/static/css/custom.css" rel="stylesheet"/>
+</head>
+
+<body class="login">
+  <section class="vh-100">
+    <div class="container-fluid h-custom">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-md-9 col-lg-6 col-xl-5">
+          <img src="/static/img/login-bg.jpg" class="img-fluid login-limg invisible" alt="image">
+        </div>
+        <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+          <form action="{{ url_for('signup') }}" method="POST">
+            <h4 class="mb-4 pt-4">Personal Details</h4>
+            <!-- Name input -->
+            <div class="form-outline mb-4">
+              <input name = "name" type="text" id="form3Example2" class="form-control form-control-lg"
+                placeholder="Enter Name" required/>
+              <label class="form-label" for="form3Example2">Name</label>
+            </div>
+
+            <!-- Email input -->
+            <div class="form-outline mb-4">
+              <input name ="email" type="email" id="form3Example3" class="form-control form-control-lg"
+                placeholder="Enter a valid email" required/>
+              <label class="form-label" for="form3Example3">Email</label>
+            </div>
+            <!-- Mobile Number input -->
+            <div class="form-outline mb-4">
+              <input name ="phoneNumber" type="tel" id="form3Example5" class="form-control form-control-lg"
+                placeholder="Enter Mobile number" required/>
+              <label class="form-label" for="form3Example5">Registered Mobile number</label>
+            </div>
+
+            <!-- Address textarea -->
+            <div class="form-outline mb-4">
+              <textarea name ="address" class="form-control" id="form3Example6" rows="4" required></textarea>
+              <label class="form-label" for="form3Example6">Address</label>
+            </div>
+            <div class="row mb-4">
+                        <div class="col">
+                          <!-- City input -->
+                          <div class="form-outline">
+                            <input name="city" type="text" id="form3Example7" class="form-control form-control-lg"
+                              placeholder="City Name" required/>
+                            <label class="form-label" for="form3Example7">City</label>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <!-- State input -->
+                          <div class="form-outline">
+                            <input name="state" type="text" id="form3Example8" class="form-control form-control-lg"
+                              placeholder="Enter State" required/>
+                            <label class="form-label" for="form3Example8">State</label>
+                          </div>
+                      </div>
+                    </div>
+            <!-- Pincode input -->
+            <div class="form-outline mb-4">
+              <input name = "pincode" type="tel" id="form3Example9" class="form-control form-control-lg"
+                placeholder="Enter Pincode" required/>
+              <label class="form-label" for="form3Example9">Pincode</label>
+            </div>
+            <div class="text-center text-lg-end mt-4">
+            <input type="submit" name="submit" value="Next" class="btn btn-primary btn-lg"  style="padding-left: 2.5rem; padding-right: 2.5rem;"/>
+
+            </div>
+
+          </form>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MDB -->
+  <script type="text/javascript" src="/static/js/mdb.min.js"></script>
+  <!-- Custom scripts -->
+  <script type="text/javascript">
+    
+      function validateForm() {
+        var user = document.getElementById("username").value;
+        var pawrd = document.getElementById("password").value;
+
+        // Check if the fields are empty
+        if (user == "" || pawrd == "") {
+          alert("Please enter your username and password");
+          return false;
+        }
+
+        // Check if the username and password are correct
+        // This is just a simple example and should be replaced with actual authentication code
+        if (user != "sravani" || pawrd != "12345") {
+          alert("Invalid username or password. Please try again.");
+          return false;
+        }
+
+        // If all validation passes, allow the form to be submitted
+        return true;
+      }
+  </script>
+</body>
+
+</html>

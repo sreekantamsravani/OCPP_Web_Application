@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Station Details</title>
+  <!-- MDB icon -->
+  <link rel="icon" href="/static/img/estr.png" type="image/x-icon" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
+  <!-- MDB -->
+  <link  href="/static/css/bootstrap.min.css" rel="stylesheet"/>
+  <!-- Custom CSS -->
+  <link  href="/static/css/custom.css" rel="stylesheet"/>
+</head>
+
+<body class="login">
+  <section class="vh-100">
+    <div class="container-fluid h-custom">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-md-9 col-lg-6 col-xl-5">
+          <img src="/static/img/login-bg.jpg" class="img-fluid login-limg d-none" alt="image">
+        </div>
+        <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+          <form action="{{ url_for('station') }}" method="POST">
+            <h4 class="mb-4 pt-4">Station Details</h4>
+
+            <!-- Vendor Name input -->
+            <div class="form-outline mb-4">
+              <input name = "vendorname" type="text" id="form3Example3" class="form-control form-control-lg"
+                placeholder="Enter Vendor Name" />
+              <label class="form-label" for="form3Example3">Vendor Name</label>
+            </div>
+
+            <!-- Model input -->
+            <div class="form-outline mb-3">
+              <input name = "model" type="text" id="form3Example4" class="form-control form-control-lg"
+                placeholder="Enter Model" />
+              <label class="form-label" for="form3Example4">Model</label>
+            </div>
+
+            <!-- Firmware input -->
+            <div class="form-outline mb-3">
+              <input name="firmware" type="text" id="form3Example5" class="form-control form-control-lg"
+                placeholder="Enter Firmware" />
+              <label class="form-label" for="form3Example5">Firmware</label>
+            </div>
+
+            <!-- Serial Number input -->
+            <div class="form-outline mb-3">
+              <input name="serialname" type="text" id="form3Example6" class="form-control form-control-lg"
+                placeholder="Enter Serial Number" />
+              <label class="form-label" for="form3Example6">Serial Number</label>
+            </div>
+
+            <!-- Modem input -->
+            <div class="form-outline mb-3">
+              <input name="modem" type="text" id="form3Example7" class="form-control form-control-lg"
+                placeholder="Enter Modem" />
+              <label class="form-label" for="form3Example7">Modem</label>
+            </div>
+
+            <!-- Location input -->
+            <div class="form-outline mb-3">
+              <input name ="location" type="text" id="form3Example8" class="form-control form-control-lg"
+                placeholder="Enter Location" />
+              <label class="form-label" for="form3Example8">Location</label>
+            </div>
+
+            <div class="row mb-3">
+              <div class="col">
+                <!-- No. of EVSE’s input -->
+                <div class="form-outline">
+                  <input name="numberOfEVSEs"type="text" id="form3Example9" class="form-control form-control-lg"
+                    placeholder="Enter No. of EVSE’s" />
+                  <label class="form-label" for="form3Example9">No. of EVSE’s</label>
+                </div>
+              </div>
+              <div class="col">
+                <!-- No. of Connector’s on each EVSE input -->
+                <div class="form-outline mb-3">
+                  <input name="numberOfConnectors" type="text" id="form3Example9" class="form-control form-control-lg"
+                    placeholder="Enter No. of Connector’s on each EVSE" />
+                  <label class="form-label" for="form3Example9">No. of Connector’s on each EVSE</label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Cable Capacity input -->
+            <div class="form-outline mb-3">
+              <input name="cablecapacity" type="text" id="form3Example10" class="form-control form-control-lg"
+                placeholder="Enter Cable Capacity" />
+              <label class="form-label" for="form3Example10">Cable Capacity</label>
+            </div>
+
+            <div class="text-center text-lg-end mt-4 pt-2">
+              <a href="station_details" class="btn btn-primary btn-lg"  style="padding-left: 2.5rem; padding-right: 2.5rem;">Back</a>
+        
+              <input type="submit" name="submit" value="submit" href="cs-authentication.html" class="btn btn-primary btn-lg" style="padding-left: 2.5rem; padding-right: 2.5rem;"/>
+          
+            </div>
+
+          </form>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MDB -->
+  <script type="text/javascript" src="/static/js/mdb.min.js"></script>
+  <!-- Custom scripts -->
+  <script type="text/javascript"></script>
+</body>
+
+</html>

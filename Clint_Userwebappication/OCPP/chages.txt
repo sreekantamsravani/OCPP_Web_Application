@@ -1,0 +1,19 @@
+Open a Command Prompt window and navigate to the directory where you want to create the virtual environment.
+
+Run the command python -m venv myenv to create a new virtual environment called "myenv" in the current directory.
+
+Once the virtual environment is created, activate it by running the command .\myenv\Scripts\activate.
+
+You should see the name of the virtual environment appear in parentheses in the Command Prompt, indicating that it is now active.
+
+Now, you can install any necessary packages or dependencies for your project within the virtual environment.
+
+When you are finished working in the virtual environment, you can deactivate it by running the command deactivate.
+
+
+pip install mysql-connector-python
+
+
+Get-ExecutionPolicy
+Set-ExecutionPolicy RemoteSigned
+.\env\Scripts\activate

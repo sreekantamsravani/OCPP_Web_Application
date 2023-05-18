@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Cs Verification Details</title>
+  <!-- MDB icon -->
+  <link rel="icon" href="/static/img/estr.png" type="image/x-icon" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
+  <!-- MDB -->
+  <link  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.css" rel="stylesheet"/>
+  <!-- Custom CSS -->
+  <link  href="/static/css/custom.css" rel="stylesheet"/>
+</head>
+
+<body class="login">
+  <section class="vh-100">
+    <div class="container-fluid h-custom">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-md-9 col-lg-6 col-xl-5">
+          <img src="/static/img/login-bg.jpg" class="img-fluid login-limg d-none" alt="image">
+        </div>
+        <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+          <form action="{{ url_for('cs_verification') }}" method="POST">
+            
+
+            <h4 class="mb-4 pt-4">Cs Verification Details</h4>
+
+            <div class="row mb-3">
+              <div class="col">
+                <!--Cs Status input -->
+                <div class="form-outline">
+                  <input name="csStatus" type="text" id="form3Example9" class="form-control form-control-lg"
+                    placeholder="Enter Cs Status" />
+                  <label class="form-label" for="form3Example9">Cs Status</label>
+                </div>
+              </div>
+              <div class="col">
+                <!-- NVendor ID input -->
+                <div class="form-outline">
+                  <input name="vendorId" type="text" id="form3Example9" class="form-control form-control-lg"
+                    placeholder="Enter Vendor ID" />
+                  <label class="form-label" for="form3Example9">Vendor ID</label>
+                </div>
+              </div>
+            </div>
+            {% for evse in range(1, Num_EVSE+1) %}
+<div class="row mb-3">
+  <div class="col">
+    <!--EVSE ID input -->
+    <div class="form-outline">
+      <input name="EVSEID{{ evse }}" type="text" id="form3Example{{ evse }}" class="form-control form-control-lg"
+        placeholder="Enter EVSE ID" />
+      <label class="form-label" for="form3Example{{ evse }}">EVSE ID</label>
+    </div>
+  </div>
+
+  {% for connector in range(1, Num_Connectors+1) %}
+  <div class="col">
+    <!-- Connector ID’s input -->
+    <div class="form-outline">
+      <input name="connectorID{{ evse }}{{ connector }}" type="text" id="form3Example{{ evse }}{{ connector }}" class="form-control form-control-lg"
+        placeholder="Enter Connector ID’s" />
+      <label class="form-label" for="form3Example{{ evse }}{{ connector }}">Connector{{ connector }} ID’s</label>
+
+      
+    </div>
+    <div class="form-outline">
+    <input name="connectorType{{ evse }}{{ connector }}" type="text" id="form" class="form-control form-control-lg"
+        placeholder="Enter Connector Type" />
+      <label class="form-label" for="form">ConnectorType</label>
+    </div>
+  </div>
+
+  {% endfor %}
+
+</div>
+{% endfor %}
+
+            <!-- Pricing input -->
+            <div class="form-outline">
+              <input name="price" type="text" id="form3Example5" class="form-control form-control-lg"
+                placeholder="Enter Pricing" />
+              <label class="form-label" for="form3Example5">Pricing Name</label>
+            </div>
+            <div class="text-center text-lg-end mt-4 pt-2">
+              <input type="submit" name="submit" value="Home Page" class="btn btn-primary btn-lg" style="padding-left: 2.5rem; padding-right: 2.5rem;"/>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MDB -->
+  <script type="text/javascript" src="/static/js/mdb.min.js"></script>
+  <!-- Custom scripts -->
+  <script type="text/javascript"></script>
+</body>
+
+</html>
